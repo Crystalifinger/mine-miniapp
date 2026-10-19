@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090d19">
+  <title>MINE | Mining Arena</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo">M</div>
+    <div>
+      <h2>MINE</h2>
+      <small>MINING ARENA</small>
+    </div>
+  </div>
+  <button class="wallet" onclick="connectWallet()">Connect Wallet</button>
+</header>
+
+<section class="hero">
+  <span class="tag">TON ECOSYSTEM</span>
+  <h1>Build Your<br><span>Mining Empire.</span></h1>
+  <p>Collect miners, earn MINE and trade equipment with other players.</p>
+  <button class="primary" onclick="showTab('store')">Explore Miners ↗</button>
+</section>
+
+<section class="stats">
+  <div class="stat">
+    <small>MINE BALANCE</small>
+    <h2 id="balance">125.00</h2>
+  </div>
+  <div class="stat">
+    <small>MINING POWER</small>
+    <h2 id="power">12.5 TH/s</h2>
+  </div>
+  <div class="stat">
+    <small>OWNED MINERS</small>
+    <h2 id="owned">1</h2>
+  </div>
+</section>
+
+<nav>
+  <button class="tab active" onclick="showTab('store')">Miners Store</button>
+  <button class="tab" onclick="showTab('market')">Marketplace</button>
+  <button class="tab" onclick="showTab('tasks')">Tasks</button>
+</nav>
+
+<main>
+  <section id="store" class="page active">
+    <h2>Miners Store</h2>
+    <p class="subtitle">Choose your equipment and payment token.</p>
+    <div id="miners" class="grid"></div>
+  </section>
+
+  <section id="market" class="page">
+    <h2>Marketplace</h2>
+    <p class="subtitle">Player trading uses MINE only.</p>
+    <div id="listings"></div>
+  </section>
+
+  <section id="tasks" class="page">
+    <h2>Tasks & Rewards</h2>
+    <div class="card">
+      <h3>✦ Community Task</h3>
+      <p>Example task for the prototype.</p>
+      <p class="green">Reward: +5 MINE</p>
+      <button id="taskButton" class="primary" onclick="claimTask()">
+        Claim Demo Reward
+      </button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  MINE Mining Arena · Prototype
+  <p>Demo balances only — no real blockchain transactions.</p>
+</footer>
+
+<div id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
